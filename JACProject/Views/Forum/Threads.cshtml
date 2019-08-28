@@ -1,0 +1,15 @@
+﻿@model JACProject.Database.Thread
+
+@{
+    ViewBag.Title = "Threads";
+}
+
+<h2>@Model.title</h2>
+
+<div style="background-color:blue">
+    @foreach (var item in Model.content)
+    {
+        <div style="background-color:black"></div>
+        <div style="background-color:white">@item.text</div>
+    }
+</div>

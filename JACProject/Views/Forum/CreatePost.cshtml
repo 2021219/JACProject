@@ -1,0 +1,28 @@
+﻿@model JACProject.Database.Post
+
+@{
+    ViewBag.Title = "CreatePost";
+}
+
+<h2>CreatePost</h2>
+
+<div>
+    @using (Html.BeginForm("PostPost", "ForumPrototype", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <table>
+            <tr>
+                <td><label>Post:</label></td>
+                <td>
+                    @Html.TextBoxFor(x => x.text))
+                </td>
+            </tr>
+            @Html.TextBoxFor(x => x.id, new { @Value = ViewBag.ThreadID })
+            <tr>
+                <td>
+                    <button type="submit">Create</button>
+                </td>
+            </tr>
+        </table>
+    }
+</div>
