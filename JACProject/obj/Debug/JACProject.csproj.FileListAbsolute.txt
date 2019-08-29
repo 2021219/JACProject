@@ -1,0 +1,2 @@
+C:\Users\Hemi Rei\Source\Repos\JACProject\JACProject\obj\Debug\JACProject.csprojAssemblyReference.cache
+C:\Users\Hemi Rei\Source\Repos\JACProject\JACProject\obj\Debug\JACProject.csproj.CoreCompileInputs.cache
