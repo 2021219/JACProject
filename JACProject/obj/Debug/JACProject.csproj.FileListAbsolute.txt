@@ -103,3 +103,5 @@ C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.cspro
 C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.csproj.CopyComplete
 C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.pdb
+C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.initial.resources
+C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.csproj.GenerateResource.cache

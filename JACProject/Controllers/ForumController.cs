@@ -16,7 +16,7 @@ namespace JACProject.Controllers
         }
 
 
-        context context = new context();
+        Context context = new Context();
 
         public ActionResult CreatePost(int? threadID)
         {

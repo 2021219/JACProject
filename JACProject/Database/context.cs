@@ -6,7 +6,7 @@ using System.Web;
 
 namespace JACProject.Database
 {
-    public class context : DbContext
+    public class Context : DbContext
     {
         public DbSet<Account> accounts { get; set; }
         public DbSet<Post> posts { get; set; }

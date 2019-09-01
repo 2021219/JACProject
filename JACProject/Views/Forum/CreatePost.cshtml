@@ -7,9 +7,8 @@
 <h2>CreatePost</h2>
 
 <div>
-    @using (Html.BeginForm("PostPost", "ForumPrototype", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("PostPost", "Forum", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-
         <table>
             <tr>
                 <td><label>Post:</label></td>
