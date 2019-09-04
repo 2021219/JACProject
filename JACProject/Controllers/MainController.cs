@@ -9,7 +9,7 @@ namespace JACProject.Controllers
     public class MainController : Controller
     {
         // GET: Main
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View();
         }
@@ -19,7 +19,7 @@ namespace JACProject.Controllers
             return View();
         }
 
-        public ActionResult JuSays()
+        public ActionResult JudithSays()
         {
             return View();
         }
