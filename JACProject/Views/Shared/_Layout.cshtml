@@ -12,15 +12,17 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("Judith Collins", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Judith Collins", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            <div >
                 <p class="nav navbar-nav">
-                    @Html.ActionLink("Home", "Index", "Main")
+                    @Html.ActionLink("Home", "Home", "Main")
                     @Html.ActionLink("Views", "Views", "Main")
                     @Html.ActionLink("Judith Says", "JudithSays", "Main")
                     @Html.ActionLink("Contact", "Contact", "Main")
                 </p>
                 @Html.Partial("_LoginPartial")
+            </div>                
         </div>
     </div>
     <div class="container body-content">
