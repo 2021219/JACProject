@@ -41,12 +41,14 @@ namespace JACProject.Controllers
 
         public ActionResult CreatePost(int? threadID)
         {
-            if (threadID == null)
+            if (threadID != null)
             {
-                threadID = 1;
+                ViewBag.ThreadID = threadID.ToString();
             }
-
-            ViewBag.ThreadID = threadID.ToString();
+            else
+            {
+                ViewBag.ThreadID = 0;
+            }
 
             return View();
         }
@@ -60,7 +62,7 @@ namespace JACProject.Controllers
             Account poster = new Account();
 
 
-            if (context.accounts.Where(x => x.name == currentUser.UserName) == null)
+            if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
             {
                 poster.name = currentUser.UserName;
                 context.accounts.Add(poster);
@@ -81,13 +83,19 @@ namespace JACProject.Controllers
             else
             {
                 chosenThread = new Thread();
+                chosenThread.content = new List<Post>();
+                context.threads.Add(chosenThread);
+                context.SaveChanges();
+                chosenThread.id = context.threads.OrderByDescending(x => x.id).FirstOrDefault().id;
+
             }
-            post.creator = context.accounts.FirstOrDefault();
+            post.creator = poster;
             post.timeCreated = DateTime.Now;
             chosenThread.content.Add(post);
             context.SaveChanges();
 
-            return RedirectToAction("Threads", new { threadID = thrdID });
+
+            return RedirectToAction("Threads", new { threadID = chosenThread.id });
         }
 
         public ActionResult Threads(int threadID)

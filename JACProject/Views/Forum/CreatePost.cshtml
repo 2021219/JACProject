@@ -13,10 +13,10 @@
             <tr>
                 <td><label>Post:</label></td>
                 <td>
-                    @Html.TextBoxFor(x => x.text))
+                    @Html.TextBoxFor(x => x.text)
                 </td>
             </tr>
-            @Html.TextBoxFor(x => x.id, new { @Value = ViewBag.ThreadID })
+            @Html.HiddenFor(x => x.id, new { @Value = ViewBag.ThreadID })
             <tr>
                 <td>
                     <button type="submit">Create</button>

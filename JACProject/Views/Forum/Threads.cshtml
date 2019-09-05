@@ -4,7 +4,10 @@
     ViewBag.Title = "Threads";
 }
 
-<h2>@Model.title</h2>
+    @if (Model.title != null)
+    {
+        <h2>@Model.title</h2>
+    }
 
 <div style="background-color:blue">
     @foreach (var item in Model.content)
