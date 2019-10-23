@@ -11,5 +11,6 @@ namespace JACProject.Database
         public DbSet<Account> accounts { get; set; }
         public DbSet<Post> posts { get; set; }
         public DbSet<Thread> threads { get; set; }
+        public DbSet<Board> boards { get; set; }
     }
 }

@@ -1,0 +1,27 @@
+﻿@model JACProject.Database.Board
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (Model.id != 0)
+{
+    <h2>@Model.id</h2>
+}
+else
+{ 
+    JACProject.Database.Context context = new JACProject.Database.Context();
+    <div style="background-color:blue">
+        @foreach (var item in context.boards)
+        {
+            <div style="background-color:black">@item.name</div>
+
+            foreach (var item2 in item.threads)
+            {
+                <div style="background-color:white">@item2.title</div>
+            }
+        }
+    </div>
+    }

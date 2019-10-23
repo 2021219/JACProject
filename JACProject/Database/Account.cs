@@ -9,5 +9,7 @@ namespace JACProject.Database
     {
         public int id { get; set; }
         public string name { get; set; }
+        public bool deleted { get; set; }
+        public int security { get; set; }
     }
 }

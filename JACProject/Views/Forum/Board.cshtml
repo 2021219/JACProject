@@ -1,0 +1,31 @@
+﻿@model JACProject.Database.Board
+
+@{
+    ViewBag.Title = "Board";
+}
+
+@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")
+
+<h2>@Model.name</h2>
+
+<h5>Boards:</h5>
+
+@if (Model.subBoards != null)
+{
+    foreach (var item in Model.subBoards)
+    {
+        @Html.ActionLink(item.name, "Board", "Forum", new { boardID = item.id }, "")
+    }
+}
+
+@Html.ActionLink("New Thread", "CreatePost", "Forum", new { boardID = Model.id }, "")
+
+<h5>Threads:</h5>
+
+@if (Model.threads != null)
+{
+    foreach (var item in Model.threads)
+    {
+        @Html.ActionLink(item.title, "Threads", "Forum", new { threadID = item.id }, "")
+    }
+}
