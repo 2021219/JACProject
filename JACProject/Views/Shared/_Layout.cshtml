@@ -6,11 +6,11 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="stylesheet" href="@Url.Content("~/Content/Something.css")" type="text/css" />
 </head>
 <body>
-    <div class="navbar navbar-fixed-top float-none" style="color:#318FCD">
-        <div class="container">
+    <div class="navbar navbar-fixed-top float-none">
+        <div class="container" style="color: black">
             <div class="navbar-header ">
                 @Html.ActionLink("Judith Collins", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
             </div>
