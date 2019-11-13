@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/Something.css")" type="text/css" />
 </head>
 <body>
-    <div class="navbar navbar-fixed-top float-none" style="background-color: blue">
-        <div class="container">
-            <div class="navbar-header ">
-                @Html.ActionLink("Judith Collins", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
+    <header>
+        <div class="navbar navbar-fixed-top float-none">
+            <div class="container">
+                <div class="navbar-header ">
+                    @Html.ActionLink("Judith Collins", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div>
+                    <p class="nav">
+                        @Html.ActionLink("Home", "Home", "Main")
+                        @Html.ActionLink("Views", "Views", "Main")
+                        @Html.ActionLink("Judith Says", "JudithSays", "Main")
+                        @Html.ActionLink("Contact", "Contact", "Main")
+                    </p>
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
-            <div>
-                <p class="nav">
-                    @Html.ActionLink("Home", "Home", "Main")
-                    @Html.ActionLink("Views", "Views", "Main")
-                    @Html.ActionLink("Judith Says", "JudithSays", "Main")
-                    @Html.ActionLink("Contact", "Contact", "Main")
-                </p>
-                @Html.Partial("_LoginPartial")
-            </div>                
         </div>
-    </div>
+    </header>
     <div class="container body-content">
         @RenderBody()
         <hr/>
