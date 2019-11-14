@@ -185,10 +185,17 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Something.css" />
+    <Content Include="Content\contactPage.css" />
+    <Content Include="Content\Home.css" />
+    <Content Include="Content\Home.js" />
+    <Content Include="Content\Images\PlaceHolder2.jpg" />
+    <Content Include="Content\Images\test1.jpg" />
+    <Content Include="Content\Images\test2.jpg" />
+    <Content Include="Content\Images\test3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\PlaceHolder1.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -280,7 +287,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
     <Folder Include="Views\MainSite\" />
   </ItemGroup>
   <ItemGroup>
