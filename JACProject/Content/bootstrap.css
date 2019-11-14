@@ -4058,6 +4058,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  color: black;
 }
 
 .nav-link {
@@ -4178,6 +4179,7 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  color:black
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
