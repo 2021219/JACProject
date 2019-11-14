@@ -105,9 +105,14 @@ namespace JACProject.Controllers
             return RedirectToAction("Threads", new { threadID = chosenThread.id });
         }
 
-        public ActionResult Threads(int threadID)
+        public ActionResult Threads(int? threadID)
         {
-                Thread thread = context.threads.Include("content").Where(x => x.id == threadID).FirstOrDefault();
+
+            if (threadID == null)
+            {
+                threadID = context.threads.Include("content").FirstOrDefault().id;
+            }
+                Thread thread = context.threads.Include("content").Include("content.creator").Where(x => x.id == threadID).FirstOrDefault();
                 return View(thread);
         }
         
@@ -140,7 +145,6 @@ namespace JACProject.Controllers
 
                 return View(board);
             }
-
         }
         
         public ActionResult NewBoard(int preboardID)

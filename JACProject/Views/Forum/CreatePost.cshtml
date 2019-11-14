@@ -11,12 +11,15 @@
     {
     <table>
         <tr>
-            <td><label>Post:</label></td>
-            <td>
-                @Html.TextBoxFor(x => x.text)
-            </td>
+            <td><label>Title:</label></td>
             <td>
                 @Html.TextBoxFor(x => x.title)
+            </td>
+        </tr>
+        <tr>
+            <td><label>Post:</label></td>
+            <td>
+                @Html.TextAreaFor(x => x.text, new { @class = "form-control", @value = "" })
             </td>
         </tr>
         @Html.HiddenFor(x => x.id, new { @Value = ViewBag.ThreadID })

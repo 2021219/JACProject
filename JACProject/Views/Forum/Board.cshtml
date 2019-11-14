@@ -3,29 +3,99 @@
 @{
     ViewBag.Title = "Board";
 }
+<head>
+    <style>
 
-@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")
+        .forumActionButton {
+            border-radius: 10px 10px 10px 10px;
+            margin-bottom: 1%;
+            float:right;
+            display:inline-block;
+        }
 
-<h2>@Model.name</h2>
+        .boardsWrapper {
+            background-color: #318FCD;
+            margin-bottom: 4%;
+            border-radius: 10px 10px 10px 10px;
+            clear:both;
+        }
+        .boardWrapper {
+            background-color: black;
+            margin-bottom: 5px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .boardNameTile
+        {
+            background-color: lightblue;
+            font-size: larger;
+            display:inline-block;
+            border-radius: 10px 10px 0px 0px;
+            width:250px;
+            
+        }
+        .boardDescriptionTile
+        {
+            background-color:white;
+            font-size: small;
+            display:block;
+            height:50px;
+        }
+        .boardImage
+        {
+            height:20px;
+            width:20px;
+            display:inline-block;
+        }
 
-<h5>Boards:</h5>
+    </style>
+</head>
+<body style="background-color:#318FCD">
+    <h2>@Model.name</h2>
 
-@if (Model.subBoards != null)
-{
-    foreach (var item in Model.subBoards)
+    <div><h5 style="display:inline-block" class="BoardTitle">Boards:</h5><button class="forumActionButton">@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")</button></div>
+    @if (Model.subBoards != null)
     {
-        @Html.ActionLink(item.name, "Board", "Forum", new { boardID = item.id }, "")
+        <div class="boardsWrapper">
+            @foreach (var item in Model.subBoards)
+            {
+                <div class="boardWrapper">
+                    <a href="~/Forum/Board?boardID=@item.id.ToString()" style="color:black">
+                        <img class="boardImage" src="https://upload.wikimedia.org/wikipedia/en/e/e0/WPVG_icon_2016.svg" />
+                        <div class="boardNameTile">
+                            @item.name
+                        </div>
+                        <div class="boardDescriptionTile">
+                            Dummy Text
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
     }
-}
 
-@Html.ActionLink("New Thread", "CreatePost", "Forum", new { boardID = Model.id }, "")
+        <div>
+            <h5 style="display:inline-block" class="BoardTitle">Threads:</h5>
+            <button class="forumActionButton">@Html.ActionLink("New Thread", "CreatePost", "Forum", new { boardID = Model.id }, "")</button>
+        </div>
 
-<h5>Threads:</h5>
 
-@if (Model.threads != null)
-{
-    foreach (var item in Model.threads)
+    @if (Model.threads != null)
     {
-        @Html.ActionLink(item.title, "Threads", "Forum", new { threadID = item.id }, "")
+        <div class="boardsWrapper">
+            @foreach (var item in Model.threads)
+            {
+                <div class="boardWrapper">
+                    <a href="~/Forum/Threads?threadID=@item.id.ToString()" style="color:black">
+                        <img class="boardImage" src="https://upload.wikimedia.org/wikipedia/en/e/e0/WPVG_icon_2016.svg" />
+                        <div class="boardNameTile">
+                            @item.title
+                        </div>
+                        <div class="boardDescriptionTile">
+                            Description
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
     }
-}
+</body>
