@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="stylesheet" href="@Url.Content("~/Content/Something.css")" type="text/css" />
 </head>
 <body>
     <header>
@@ -16,7 +15,7 @@
                     @Html.ActionLink("Judith Collins", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
                 <div>
-                    <p class="nav" style="color: black">
+                    <p class="nav">
                         @Html.ActionLink("Home", "Home", "Main")
                         @Html.ActionLink("Views", "Views", "Main")
                         @Html.ActionLink("Judith Says", "JudithSays", "Main")
