@@ -192,6 +192,7 @@
     <Content Include="Content\Images\test1.jpg" />
     <Content Include="Content\Images\test2.jpg" />
     <Content Include="Content\Images\test3.jpg" />
+    <Content Include="Content\Navbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
