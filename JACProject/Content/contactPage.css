@@ -17,14 +17,6 @@ div{
     font-size: 200%;
 }
 
-a:link {
-    color: #318FCD
-}
-
-a:hover {
-    color: grey
-}
-
 p{
     color:black;
 }
@@ -34,3 +26,10 @@ p{
     margin-right: 5%;
 }
 
+.Subcontainer:link {
+    color: #318FCD
+}
+
+.Subcontainer:hover {
+    color: grey
+}
