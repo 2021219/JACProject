@@ -12,8 +12,8 @@
     <header>
         <div class="navbar navbar-fixed-top float-none">
             <div class="container">
-                <div class="navbar-header ">
-                    @Html.ActionLink("Judith Collins", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="navbar-header">
+                    <h1>Judith Collins</h1>
                 </div>
                 <div>
                     <p class="nav">
@@ -21,8 +21,9 @@
                         @Html.ActionLink("Views", "Views", "Main")
                         @Html.ActionLink("Judith Says", "JudithSays", "Main")
                         @Html.ActionLink("Contact", "Contact", "Main")
+                        @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+                        @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
                     </p>
-                    @Html.Partial("_LoginPartial")
                 </div>
             </div>
         </div>
