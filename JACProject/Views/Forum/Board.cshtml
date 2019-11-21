@@ -6,6 +6,11 @@
 <head>
     <style>
 
+        header{
+            background-color:white;
+            margin-bottom:10px;
+        }
+
         .forumActionButton {
             border-radius: 10px 10px 10px 10px;
             margin-bottom: 1%;
@@ -23,6 +28,8 @@
             background-color: black;
             margin-bottom: 5px;
             border-radius: 5px 5px 5px 5px;
+            border-color:black;
+            border-width:5px;
         }
         .boardNameTile
         {
@@ -31,6 +38,7 @@
             display:inline-block;
             border-radius: 10px 10px 0px 0px;
             width:250px;
+            padding-left:5px;
             
         }
         .boardDescriptionTile
@@ -39,6 +47,7 @@
             font-size: small;
             display:block;
             height:50px;
+            padding-left:5px;
         }
         .boardImage
         {
@@ -49,12 +58,13 @@
 
     </style>
 </head>
-<body style="background-color:#318FCD">
-    <h2>@Model.name</h2>
+<body class="container" style="background-color:#318FCD">
+    <h1>@Model.name</h1>
 
-    <div><h5 style="display:inline-block" class="BoardTitle">Boards:</h5><button class="forumActionButton">@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")</button></div>
-    @if (Model.subBoards != null)
+    @if (Model.subBoards.Count > 0)
     {
+        <div><h5 style="display:inline-block" class="BoardTitle">Boards:</h5><button class="forumActionButton">@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")</button></div>
+
         <div class="boardsWrapper">
             @foreach (var item in Model.subBoards)
             {
@@ -73,10 +83,14 @@
         </div>
     }
 
-        <div>
-            <h5 style="display:inline-block" class="BoardTitle">Threads:</h5>
-            <button class="forumActionButton">@Html.ActionLink("New Thread", "CreatePost", "Forum", new { boardID = Model.id }, "")</button>
-        </div>
+    <div>
+        <h5 style="display:inline-block" class="BoardTitle">Threads:</h5>
+        @if (Model.subBoards.Count == 0)
+        {
+            <button class="forumActionButton">@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")</button>
+        }
+        <button class="forumActionButton">@Html.ActionLink("New Thread", "CreatePost", "Forum", new { boardID = Model.id }, "")</button>
+    </div>
 
 
     @if (Model.threads != null)

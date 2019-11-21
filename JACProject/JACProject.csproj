@@ -218,6 +218,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Database\Account.cs" />
     <Compile Include="Database\Board.cs" />
@@ -273,6 +274,14 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\contactPage.css" />
+    <Content Include="Content\Home.css" />
+    <Content Include="Content\Home.js" />
+    <Content Include="Content\images\test1.jpg" />
+    <Content Include="Content\images\test2.jpg" />
+    <Content Include="Content\images\test3.jpg" />
+    <Content Include="Content\Navbar.css" />
+    <Content Include="Content\Views.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -367,6 +376,10 @@
     <Content Include="Views\Forum\Index.cshtml" />
     <Content Include="Views\Forum\Board.cshtml" />
     <Content Include="Views\Forum\NewBoard.cshtml" />
+    <Content Include="Views\Main\Home.cshtml" />
+    <Content Include="Views\Main\Contact.cshtml" />
+    <Content Include="Views\Main\JudithSays.cshtml" />
+    <Content Include="Views\Main\Views.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,36 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
+    <title>@ViewBag.Title - Judith Collins MP</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="stylesheet" href="@Url.Content("~/Content/Navbar.css")" type="text/css" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Forum", "Board", "Forum")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+    <header>
+        <div class="navbar navbar-fixed-top float-none">
+            <div class="container">
+                <div class="navbar-header">
+                    <h1>Judith Collins</h1>
+                </div>
+                <div>
+                    <p class="nav">
+                        @Html.ActionLink("Home", "Home", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Views", "Views", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Judith Says", "JudithSays", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Contact", "Contact", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "navLink" })
+                        @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { @class = "navLink"})
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <hr/>
         <footer>
-            <p>&copy; @DateTime.Now.Year</p>
+            <p>Authorised by Judith Collins MP, Roselands Shopping Ctr, 98 Great South Road, Papakura.</p>
         </footer>
     </div>
 

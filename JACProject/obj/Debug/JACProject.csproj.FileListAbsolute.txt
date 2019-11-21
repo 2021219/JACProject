@@ -43,10 +43,7 @@ C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\roslyn\vbc.rsp
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\roslyn\VBCSCompiler.exe
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Antlr3.Runtime.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\EntityFramework.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\EntityFramework.SqlServer.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Owin.dll
@@ -58,7 +55,6 @@ C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Owin.Securit
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Newtonsoft.Json.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Owin.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Web.Helpers.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Web.Mvc.dll
@@ -120,12 +116,9 @@ C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Threading.Overl
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Xml.XPath.XDocument.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.Http.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.ObjectPool.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.Options.dll
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.Primitives.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Net.Http.Headers.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Buffers.dll
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.ComponentModel.Annotations.dll
@@ -138,12 +131,9 @@ C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Threading.Tasks
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Antlr3.Runtime.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.Http.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.Http.Abstractions.xml
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.Http.Features.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNetCore.WebUtilities.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.ObjectPool.xml
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.Options.xml
-C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Extensions.Primitives.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.Net.Http.Headers.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.Buffers.xml
 C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\System.IO.Pipelines.xml
