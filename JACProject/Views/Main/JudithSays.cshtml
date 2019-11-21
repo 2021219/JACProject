@@ -4,14 +4,96 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    body {
+        background-color: #cccccc;
+        filter: greyscale(0%);
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Blason_ville_fr_Chamonix-Mont-Blanc_%28Haute-Savoie%29.svg/931px-Blason_ville_fr_Chamonix-Mont-Blanc_%28Haute-Savoie%29.svg.png);
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+
+    .VideoTile {
+       background-color:black;
+       color:white;
+       display:inline-block; 
+       width:50%;
+       padding-left:5px;
+       padding-right:5px;
+       padding-bottom:5px;
+    }
+
+    .AudioLinkContainerHeader{
+        background-color:black;
+        color:white;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .AudioLinkContainer{
+        background-color:white;
+        border-color:black;
+        border-style:ridge;
+        border-width:thin;
+        float:right;
+        margin-right:5px;
+        margin-top:5px;
+    }
+
+    header{
+        background-color:white;
+    }
+
+    .videoWrap{
+        overflow:hidden;position:relative;
+        padding-bottom:56.25%;
+    }
+
+    .videoLink{
+        position:absolute;
+        height:100%;
+    }
+
+
+</style>
+
 <h2>JudithSays</h2>
 
 <body class="container">
-    <div class="container">
-        <h4>Funny Comment</h4>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dt9FSSoLbmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="container">
-
+    <div>
+        <div class="AudioLinkContainer" style="display:inline-block;">
+            <div class="AudioLinkContainerHeader">
+                <h4>Podcasts:</h4>
+            </div>
+            <ul>
+                <li>vbnmj</li>
+                <li>vbghjk</li>
+                <li>ghjk</li>
+            </ul>
+        </div>
+        <div class="VideoTile">
+            <div class="videoWrap">
+                <h4 style="text-align:center">Video Title</h4>
+                <iframe style="text-align:center; width:100%;" class="videoLink" src="https://www.youtube-nocookie.com/embed/dt9FSSoLbmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div style="background-color:white; display:inline-block; width:50%">
+            <div class="videoWrap">
+                <h4 style="text-align:center">Video Title</h4>
+                <iframe style="text-align:center; width:100%;" class="videoLink" src="https://www.youtube-nocookie.com/embed/dt9FSSoLbmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div style="background-color:white; display:inline-block; width:50%">
+            <div class="videoWrap">
+                <h4 style="text-align:center">Video Title</h4>
+                <iframe style="text-align:center; width:100%;" class="videoLink" src="https://www.youtube-nocookie.com/embed/dt9FSSoLbmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div style="background-color:white; display:inline-block; width:50%">
+            <div class="videoWrap">
+                <h4 style="text-align:center">Video Title</h4>
+                <iframe style="text-align:center; width:100%;" class="videoLink" src="https://www.youtube-nocookie.com/embed/dt9FSSoLbmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </body>

@@ -1,4 +1,4 @@
-﻿a:link, a:visited {
+﻿﻿.navLink:link, .navLink:visited {
     background-color: grey;
     color: white;
     padding: 9px 15px;
@@ -7,6 +7,6 @@
     display: inline-block;
 }
 
-a:hover, a:active {
+.navLink:hover, .navLink:active {
     background-color: black;
 }

@@ -1,0 +1,115 @@
+﻿@model JACProject.Database.Board
+
+@{
+    ViewBag.Title = "Board";
+}
+<head>
+    <style>
+
+        header{
+            background-color:white;
+            margin-bottom:10px;
+        }
+
+        .forumActionButton {
+            border-radius: 10px 10px 10px 10px;
+            margin-bottom: 1%;
+            float:right;
+            display:inline-block;
+        }
+
+        .boardsWrapper {
+            background-color: #318FCD;
+            margin-bottom: 4%;
+            border-radius: 10px 10px 10px 10px;
+            clear:both;
+        }
+        .boardWrapper {
+            background-color: black;
+            margin-bottom: 5px;
+            border-radius: 5px 5px 5px 5px;
+            border-color:black;
+            border-width:5px;
+        }
+        .boardNameTile
+        {
+            background-color: lightblue;
+            font-size: larger;
+            display:inline-block;
+            border-radius: 10px 10px 0px 0px;
+            width:250px;
+            padding-left:5px;
+            
+        }
+        .boardDescriptionTile
+        {
+            background-color:white;
+            font-size: small;
+            display:block;
+            height:50px;
+            padding-left:5px;
+        }
+        .boardImage
+        {
+            height:20px;
+            width:20px;
+            display:inline-block;
+        }
+
+    </style>
+</head>
+<body class="container" style="background-color:#318FCD">
+    <h1>@Model.name</h1>
+
+    @if (Model.subBoards.Count > 0)
+    {
+        <div><h5 style="display:inline-block" class="BoardTitle">Boards:</h5><button class="forumActionButton">@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")</button></div>
+
+        <div class="boardsWrapper">
+            @foreach (var item in Model.subBoards)
+            {
+                <div class="boardWrapper">
+                    <a href="~/Forum/Board?boardID=@item.id.ToString()" style="color:black">
+                        <img class="boardImage" src="https://upload.wikimedia.org/wikipedia/en/e/e0/WPVG_icon_2016.svg" />
+                        <div class="boardNameTile">
+                            @item.name
+                        </div>
+                        <div class="boardDescriptionTile">
+                            Dummy Text
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+
+    <div>
+        <h5 style="display:inline-block" class="BoardTitle">Threads:</h5>
+        @if (Model.subBoards.Count == 0)
+        {
+            <button class="forumActionButton">@Html.ActionLink("New Board", "NewBoard", "Forum", new { preboardID = Model.id }, "")</button>
+        }
+        <button class="forumActionButton">@Html.ActionLink("New Thread", "CreatePost", "Forum", new { boardID = Model.id }, "")</button>
+    </div>
+
+
+    @if (Model.threads != null)
+    {
+        <div class="boardsWrapper">
+            @foreach (var item in Model.threads)
+            {
+                <div class="boardWrapper">
+                    <a href="~/Forum/Threads?threadID=@item.id.ToString()" style="color:black">
+                        <img class="boardImage" src="https://upload.wikimedia.org/wikipedia/en/e/e0/WPVG_icon_2016.svg" />
+                        <div class="boardNameTile">
+                            @item.title
+                        </div>
+                        <div class="boardDescriptionTile">
+                            Description
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+</body>
