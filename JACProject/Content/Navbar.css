@@ -1,12 +1,12 @@
-﻿﻿.navLink:link, .navLink:visited {
-    background-color: grey;
-    color: white;
-    padding: 9px 15px;
+﻿﻿a{
+    background-color: green;
+    color: black;
+    padding: 10px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
 }
 
-.navLink:hover, .navLink:active {
-    background-color: black;
+a:hover, a:active {
+    background-color: lightblue;
 }
