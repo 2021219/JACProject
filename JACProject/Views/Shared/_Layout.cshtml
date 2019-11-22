@@ -7,6 +7,20 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="@Url.Content("~/Content/Navbar.css")" type="text/css" />
+    <style>
+        ﻿a:link, a:visited {
+            
+            color: black;
+            
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,13 +30,13 @@
                     <h1>Judith Collins</h1>
                 </div>
                 <div>
-                    <p class="nav">
-                        @Html.ActionLink("Home", "Home", "Main")
-                        @Html.ActionLink("Views", "Views", "Main")
-                        @Html.ActionLink("Judith Says", "JudithSays", "Main")
-                        @Html.ActionLink("Contact", "Contact", "Main")
-                        @Html.ActionLink("Register", "Register", "Account")
-                        @Html.ActionLink("Log in", "Login", "Account")
+                    <p class="nav" style="background-color: green; padding: 10px 16px;">
+                        @Html.ActionLink("Home", "Home", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Views", "Views", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Judith Says", "JudithSays", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Contact", "Contact", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "navLink" })
+                        @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { @class = "navLink"})
                     </p>
                 </div>
             </div>
