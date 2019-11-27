@@ -1,12 +1,48 @@
-﻿.navLink:link, .navLink:visited {
-    background-color: grey;
-    color: white;
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(120deg,skyblue, #1372bb)
+}
+
+a.navLink, div.navLink, .navLink:link, .navLink:visited {
+    background-color: lightgray;
+    color: black;
     padding: 9px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 2px;
+    margin-right: 2px;
+    border-color: darkgray;
+    margin-bottom: 2px;
+}
+
+
+.Heading-Underline {
+    background-image: linear-gradient(120deg, #483D8B 0%, #59aad8 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    padding-right: 8%;
+    font-size: 300%;
+}
+
+.bannerTitle{
+    color:white
 }
 
 .navLink:hover, .navLink:active {
-    background-color: black;
+    background-color: grey;
+}
+
+
+.banner {
+    background-image: url(images/bg_header.png);
+   background-size:cover;
+    min-height: 200px;
+    height:30%;
+    margin-top: 0px;
+}
+footer{
+    margin-bottom:0px;
 }

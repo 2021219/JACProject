@@ -9,25 +9,41 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/Navbar.css")" type="text/css" />
 </head>
 <body>
-    <header>
+    <headerbanner>
         <div class="navbar navbar-fixed-top float-none">
-            <div class="container">
+            <div class="container banner">
                 <div class="navbar-header">
-                    <h1>Judith Collins</h1>
+                    <h1 class="bannerTitle">Judith Collins</h1>
                 </div>
                 <div>
                     <p class="nav">
                         @Html.ActionLink("Home", "Home", "Main", null, new { @class = "navLink" })
                         @Html.ActionLink("Views", "Views", "Main", null, new { @class = "navLink" })
                         @Html.ActionLink("Judith Says", "JudithSays", "Main", null, new { @class = "navLink" })
+                        @Html.ActionLink("You Say", "board", "Forum", null, new { @class = "navLink" })
                         @Html.ActionLink("Contact", "Contact", "Main", null, new { @class = "navLink" })
-                        @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "navLink" })
-                        @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { @class = "navLink"})
+                        @using Microsoft.AspNet.Identity
+                        @if (Request.IsAuthenticated)
+                        {
+                            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                @Html.ActionLink("Settings", "ForumSettings", "Forum", routeValues: null, htmlAttributes: new { @class = "navLink"})
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "navLink", title = "Manage" })
+                                <a class="navLink" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a>
+                            }
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "navLink" })
+                            @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { @class = "navLink" })
+                        }
                     </p>
                 </div>
             </div>
         </div>
-    </header>
+    </headerbanner>
     <div class="container body-content">
         @RenderBody()
         <hr/>

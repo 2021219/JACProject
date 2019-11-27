@@ -149,3 +149,10 @@ C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migra
 C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.SubBoardsAdded.resources
 C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.SubBoardsRemovedSectionsAdded.resources
 C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.PostTitles.resources
+C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\EntityFramework.dll
+C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\EntityFramework.SqlServer.dll
+C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\James\Documents\GitHub\JACProject\JACProject\bin\Newtonsoft.Json.dll
+C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.AdditionalUserInfo.resources
+C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.boardThreadDescriptions.resources
+C:\Users\James\Documents\GitHub\JACProject\JACProject\obj\Debug\JACProject.Migrations.postCountAdded.resources

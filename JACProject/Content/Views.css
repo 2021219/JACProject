@@ -29,17 +29,8 @@ h2{
     padding-right: 80%;
 }
 
-div{
+.ViewBody{
     background-color:white;
-}
-
-.Heading-Underline {
-    background-image: linear-gradient(120deg, #483D8B 0%, #80b3ff 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 88%;
-    padding-right: 8%;
-    font-size: 300%;
 }
 
 .Text{

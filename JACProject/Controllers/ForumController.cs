@@ -31,30 +31,79 @@ namespace JACProject.Controllers
 
 
         // GET: Forum
+        
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Boards");
         }
 
 
         Context context = new Context();
 
-        public ActionResult CreatePost(int? threadID, int? boardID)
-        {            
+        public ActionResult PleaseLogIn()
+        {
+            return View();
+        }
+
+        public void confirmLogin()
+        {
+            string id = User.Identity.GetUserId();
+            ApplicationUser currentUser = UserManager.FindById(id);
+            Account poster = new Account();
+
+            if (currentUser != null)
             {
-                if (threadID != null)
+                if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
                 {
-                    ViewBag.ThreadID = threadID.ToString();
-                    ViewBag.BoardID = 0;
+                    poster.name = currentUser.UserName;
+                    context.accounts.Add(poster);
+                    context.SaveChanges();
+                    RedirectToAction("ForumSettings");
                 }
                 else
                 {
-                    ViewBag.ThreadID = 0;
-                    ViewBag.BoardID = boardID;
                 }
             }
+            else
+            {
+                RedirectToAction("PleaseLogIn");
+            }
+        }
 
-            return View();
+        public ActionResult CreatePost(int? threadID, int? boardID)
+        {
+            string id = User.Identity.GetUserId();
+            ApplicationUser currentUser = UserManager.FindById(id);
+            Account poster = new Account();
+
+            if (currentUser != null)
+            {
+                if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
+                {
+                    poster.name = currentUser.UserName;
+                    context.accounts.Add(poster);
+                    context.SaveChanges();
+                    return RedirectToAction("ForumSettings");
+                }
+                else
+                {
+                    if (threadID != null)
+                    {
+                        ViewBag.ThreadID = threadID.ToString();
+                        ViewBag.BoardID = 0;
+                    }
+                    else
+                    {
+                        ViewBag.ThreadID = 0;
+                        ViewBag.BoardID = boardID;
+                    }
+                    return View();
+                }
+            }
+            else
+            {
+                return RedirectToAction("PleaseLogIn");
+            }
         }
 
         [HttpPost]
@@ -65,6 +114,7 @@ namespace JACProject.Controllers
             ApplicationUser currentUser = UserManager.FindById(id);
             Account poster = new Account();
 
+            
             if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
             {
                 poster.name = currentUser.UserName;
@@ -118,6 +168,8 @@ namespace JACProject.Controllers
         
         public ActionResult Board(int? boardID)
         {
+
+
             Board board;
 
             if (context.boards.FirstOrDefault() != null)
@@ -137,7 +189,7 @@ namespace JACProject.Controllers
             {
                 board = new Board();
                 board.initial = true;
-                board.name = "Initial";
+                board.name = "You Say";
                 board.security = 0;
                 board.deleted = false;
                 context.boards.Add(board);
@@ -149,12 +201,33 @@ namespace JACProject.Controllers
         
         public ActionResult NewBoard(int preboardID)
         {
-            if (preboardID != null)
-            {
-                ViewBag.ThreadID = preboardID.ToString();
-            }
+            string id = User.Identity.GetUserId();
+            ApplicationUser currentUser = UserManager.FindById(id);
+            Account poster = new Account();
 
-            return View();
+            if (currentUser != null)
+            {
+                if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
+                {
+                    poster.name = currentUser.UserName;
+                    context.accounts.Add(poster);
+                    context.SaveChanges();
+                    return RedirectToAction("ForumSettings");
+                }
+                else
+                {
+                    if (preboardID != null)
+                    {
+                        ViewBag.ThreadID = preboardID.ToString();
+                    }
+
+                    return View();
+                }
+            }
+            else
+            {
+                return RedirectToAction("PleaseLogIn");
+            }
         }
 
         [HttpPost]
@@ -165,6 +238,7 @@ namespace JACProject.Controllers
             newBoard.deleted = false;
             newBoard.initial = false;
             newBoard.name = board.name;
+            newBoard.description = board.description;
 
             context.boards.Add(newBoard);
 
@@ -174,6 +248,68 @@ namespace JACProject.Controllers
             context.SaveChanges();
 
             return RedirectToAction("Board", new { boardID = container.id });
+        }
+
+        public ActionResult ForumSettings()
+        {
+            string id = User.Identity.GetUserId();
+            ApplicationUser currentUser = UserManager.FindById(id);
+            Account accountToBeModified = new Account();
+            if (currentUser != null)
+            {
+                if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
+                {
+                    accountToBeModified.name = currentUser.UserName;
+                    context.accounts.Add(accountToBeModified);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    accountToBeModified = context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault();
+                }
+                return View(accountToBeModified);
+            }
+            else
+            {
+                return RedirectToAction("PleaseLogIn");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult AdjustSettings(Account accountChanges)
+        {
+            string id = User.Identity.GetUserId();
+            ApplicationUser currentUser = UserManager.FindById(id);
+            Account accountToBeModified = new Account();
+            if (currentUser != null)
+            {
+                if (context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault() == null)
+                {
+                    accountToBeModified.name = currentUser.UserName;
+                    context.accounts.Add(accountToBeModified);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    accountToBeModified = context.accounts.Where(x => x.name == currentUser.UserName).FirstOrDefault();
+                    accountToBeModified.nickName = accountChanges.nickName;
+                    accountToBeModified.location = accountChanges.location;
+                    accountToBeModified.profileImageURL = accountChanges.profileImageURL;
+                    accountToBeModified.showEmail = accountToBeModified.showEmail;
+                    context.SaveChanges();
+
+                    return RedirectToAction("ForumSettings");
+                }
+                return View(accountToBeModified);
+            }
+            else
+            {
+                return RedirectToAction("PleaseLogIn");
+            }
+            
+            
+
+            
         }
     }
 }
