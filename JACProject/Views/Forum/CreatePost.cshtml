@@ -4,9 +4,26 @@
     ViewBag.Title = "CreatePost";
 }
 
-<h2>CreatePost</h2>
+<head>
+    <style>
+        .formDiv {
+            margin-top: 15px;
+            background-color: white;
+            padding-left: 5px;
+        }
 
-<div>
+        .forumSubmitButton {
+            border-radius: 10px 10px 10px 10px;
+            margin-bottom: 1%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<h2>Create Post</h2>
+
+<body class="container">
+<div class="formDiv">
     @using (Html.BeginForm("PostPost", "Forum", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
     <table>
@@ -32,3 +49,4 @@
     </table>
     }
 </div>
+    </body>
