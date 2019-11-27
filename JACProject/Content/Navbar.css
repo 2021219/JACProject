@@ -1,4 +1,4 @@
-﻿body {
+﻿﻿body {
     margin: 0px;
     padding: 0px;
     background-image: linear-gradient(120deg,skyblue, #1372bb)
@@ -16,7 +16,6 @@ a.navLink, div.navLink, .navLink:link, .navLink:visited {
     border-color: darkgray;
     margin-bottom: 2px;
 }
-
 
 .Heading-Underline {
     background-image: linear-gradient(120deg, #483D8B 0%, #59aad8 100%);
