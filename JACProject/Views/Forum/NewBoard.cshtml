@@ -4,25 +4,34 @@
     ViewBag.Title = "NewBoard";
 }
 
-<h2>NewBoard</h2>
-
-
-<div>
-    @using (Html.BeginForm("PostNewBoard", "Forum", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        <table>
-            <tr>
-                <td><label>Name:</label></td>
-                <td>
-                    @Html.TextBoxFor(x => x.name)
-                </td>
-            </tr>
-            @Html.HiddenFor(x => x.id, new { @Value = ViewBag.ThreadID })
-            <tr>
-                <td>
-                    <button type="submit">Create</button>
-                </td>
-            </tr>
-        </table>
+<style>
+    .formDiv{
+        margin-top:15px;
+        background-color:white;
+        padding-left:5px;
     }
-</div>
+
+    .forumSubmitButton {
+        border-radius: 10px 10px 10px 10px;
+        margin-bottom: 1%;
+        display: inline-block;
+    }
+
+</style>
+
+
+<body class="container">
+    <div class="formDiv">
+        <h2 class="Title">Create Board:</h2>
+        @using (Html.BeginForm("PostNewBoard", "Forum", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <label>Name:</label>
+            @Html.TextBoxFor(x => x.name)
+            @Html.HiddenFor(x => x.id, new { @Value = ViewBag.ThreadID })<br />
+            <label>Description:</label>
+            @Html.TextAreaFor(x => x.description, new { @class = "form-control", @value = "" })
+
+            <button class="forumSubmitButton" type="submit">Create</button>
+        }
+    </div>
+</body>

@@ -9,6 +9,7 @@ namespace JACProject.Database
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string description { get; set; }
         public List<Board> subBoards { get; set; }
         public List<Thread> threads { get; set; }
         public bool deleted { get; set; }

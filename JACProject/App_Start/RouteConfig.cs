@@ -18,6 +18,12 @@ namespace JACProject
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "CatchAll",
+                url: "{*any}",
+                defaults: new { controller = "Home", action = "PageNotFound" }
+                );
         }
     }
 }

@@ -8,6 +8,7 @@ namespace JACProject.Database
     public class Thread
     {
         public int id { get; set; }
+        public string description { get; set; }
         public string title { get; set; }
         public List<Post> content { get; set; }
         public bool priority { get; set; }
