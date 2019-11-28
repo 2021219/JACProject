@@ -31,7 +31,7 @@ h2{
     padding-right: 80%;
 }
 
-div{
+.ViewBody{
     background-color:white;
 }
 
@@ -56,5 +56,3 @@ img{
     padding-right: 1%;
     height: 50%;
 }
-
-

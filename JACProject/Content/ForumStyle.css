@@ -1,0 +1,161 @@
+﻿body.forumBody {
+    background-image:linear-gradient(120deg ,skyblue, #1372bb)
+}
+
+.forumActionButton {
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 1%;
+    float: right;
+    display: inline-block;
+}
+
+.boardsWrapper {
+    background-color: #318FCD;
+    margin-bottom: 4%;
+    border-radius: 10px 10px 10px 10px;
+    clear: both;
+}
+
+.boardWrapper {
+    background-color: black;
+    margin-bottom: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-color: black;
+    border-width: 5px;
+}
+
+.boardNameTile {
+    background-color: lightblue;
+    font-size: larger;
+    display: inline-block;
+    border-radius: 10px 10px 0px 0px;
+    width: 250px;
+    padding-left: 5px;
+}
+
+.boardDescriptionTile {
+    background-color: white;
+    font-size: small;
+    display: block;
+    height: 50px;
+    padding-left: 5px;
+}
+
+.boardImage {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+
+
+
+div {
+    padding:0px;
+    margin:0px;
+    display: block;
+}
+
+.forumActionButton {
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 1%;
+    float: right;
+    display: inline-block;
+}
+
+.userInfo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    clear: right;
+    width: 35%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+}
+
+.postData {
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-wrap: normal;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.forumActionButtonsContainer {
+    display: block;
+}
+
+.forumActionButton {
+    float: right;
+    clear: both;
+}
+
+.postHeader {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: large;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.postMain {
+    padding-top: 0px;
+    margin-top: 0px;
+    position: relative;
+    height: 300px;
+}
+
+.postPanel {
+    border-radius: 10px 10px 10px 10px;
+    padding: 0px 0px 20px 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.postDate {
+    display: inline-block;
+    width: 50%;
+}
+
+.postTitle {
+    display: inline-block;
+}
+
+.postInfo {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 65%;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    text-wrap: normal;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: normal;
+    height: 100%;
+}
+
+.profilePostImage {
+    height: 50%;
+}
+
+.postBlock {
+    border-radius: 10px 10px 10px 10px;
+    height: 100%;
+}
+
+.userName {
+    font-size: large;
+    margin-bottom: 10px;
+}

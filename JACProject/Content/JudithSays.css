@@ -1,0 +1,37 @@
+﻿.VideoTile {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.AudioLinkContainerHeader {
+    background-color: black;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.AudioLinkContainer {
+    background-color: white;
+    border-color: black;
+    border-style: ridge;
+    border-width: thin;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.videoWrap {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.videoLink {
+    position: absolute;
+    height: 100%;
+}
