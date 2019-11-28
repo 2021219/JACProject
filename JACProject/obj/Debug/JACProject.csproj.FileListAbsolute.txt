@@ -203,7 +203,6 @@ C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\roslyn\VBCSCompiler.exe
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\EntityFramework.dll
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\bin\Microsoft.Owin.dll
@@ -260,3 +259,6 @@ C:\Users\Hemi Rei\source\repos\JACProject\JACProject\obj\Debug\JACProject.csproj
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\obj\Debug\JACProject.dll
 C:\Users\Hemi Rei\source\repos\JACProject\JACProject\obj\Debug\JACProject.pdb
 C:\Users\Hemi Rei\Source\Repos\JACProject\JACProject\obj\Debug\JACProject.csprojAssemblyReference.cache
+C:\Users\Hemi Rei\Source\Repos\JACProject\JACProject\obj\Debug\JACProject.Migrations.AdditionalUserInfo.resources
+C:\Users\Hemi Rei\Source\Repos\JACProject\JACProject\obj\Debug\JACProject.Migrations.boardThreadDescriptions.resources
+C:\Users\Hemi Rei\Source\Repos\JACProject\JACProject\obj\Debug\JACProject.Migrations.postCountAdded.resources
